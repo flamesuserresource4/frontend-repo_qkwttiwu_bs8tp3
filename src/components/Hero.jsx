@@ -1,9 +1,10 @@
 import { Sparkles, Clock } from "lucide-react";
+import Spline from "@splinetool/react-spline";
 
 export default function Hero() {
   return (
     <section className="relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-indigo-50 to-white" />
+      <div className="absolute inset-0 bg-gradient-to-b from-indigo-50 to-white pointer-events-none" />
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
@@ -39,26 +40,20 @@ export default function Hero() {
           </div>
 
           <div className="relative">
-            <div className="aspect-[4/3] rounded-2xl bg-gradient-to-br from-indigo-600 via-violet-600 to-fuchsia-500 p-1 shadow-xl">
-              <div className="h-full w-full rounded-2xl bg-white grid grid-cols-2 grid-rows-2 overflow-hidden">
-                <div className="p-6 border-r border-b border-black/5">
-                  <p className="text-sm text-gray-500">AI Tutor Chat</p>
-                  <p className="mt-2 text-gray-900 font-semibold">Ask anything, anytime</p>
+            <div className="aspect-[4/3] rounded-2xl bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700 p-1 shadow-xl">
+              <div className="relative h-full w-full overflow-hidden rounded-2xl bg-white">
+                <div className="absolute inset-0">
+                  <Spline
+                    scene="https://prod.spline.design/M4yE7MTeWshitQbr/scene.splinecode"
+                    style={{ width: "100%", height: "100%" }}
+                  />
                 </div>
-                <div className="p-6 border-b border-black/5">
-                  <p className="text-sm text-gray-500">Upload Material</p>
-                  <p className="mt-2 text-gray-900 font-semibold">PDFs, notes, handouts</p>
-                </div>
-                <div className="p-6 border-r border-black/5">
-                  <p className="text-sm text-gray-500">Study Plan</p>
-                  <p className="mt-2 text-gray-900 font-semibold">Tailored to your exam</p>
-                </div>
-                <div className="p-6">
-                  <p className="text-sm text-gray-500">Practice Tests</p>
-                  <p className="mt-2 text-gray-900 font-semibold">Exam-like questions</p>
-                </div>
+                <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(99,102,241,0.15),transparent_60%),radial-gradient(circle_at_80%_60%,rgba(236,72,153,0.12),transparent_55%)]" />
               </div>
             </div>
+            <p className="mt-3 text-sm text-gray-500 text-center">
+              Interactive AI bot: move your cursor to see the head follow your motion.
+            </p>
           </div>
         </div>
       </div>
